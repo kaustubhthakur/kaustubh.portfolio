@@ -39,15 +39,6 @@ export default function Contact() {
       }}
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="section-label"
-          style={{ marginBottom: "1rem" }}
-        >
-          04 — Contact
-        </motion.p>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -76,7 +67,7 @@ export default function Contact() {
             fontSize: "0.95rem",
           }}
         >
-          Open to full-time roles, freelance projects, and interesting
+          Open to full-time roles and interesting
           conversations. My inbox is always open.
         </motion.p>
 
@@ -228,13 +219,13 @@ export default function Contact() {
               {
                 icon: Mail,
                 label: "Email",
-                value: "hello@alexmorgan.dev",
-                href: "mailto:hello@alexmorgan.dev",
+                value: "kaustubhthakur66@gmail.com",
+                href: "mailto:kaustubhthakur66@gmail.com",
               },
               {
                 icon: MapPin,
                 label: "Location",
-                value: "San Francisco, CA",
+                value: "Mumbai,Maharastra",
                 href: null,
               },
             ].map(({ icon: Icon, label, value, href }) => (
@@ -300,57 +291,7 @@ export default function Contact() {
               </div>
             ))}
 
-            {/* Availability badge */}
-            <div
-              style={{
-                marginTop: "auto",
-                background: "var(--bg-card)",
-                border: "1px solid var(--border)",
-                borderRadius: "0.5rem",
-                padding: "1.5rem",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.6rem",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                <span
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: "50%",
-                    background: "#4ade80",
-                    boxShadow: "0 0 8px #4ade8080",
-                    display: "inline-block",
-                  }}
-                />
-                <span
-                  className="mono"
-                  style={{
-                    fontSize: "0.7rem",
-                    color: "#4ade80",
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Available for work
-                </span>
-              </div>
-              <p
-                style={{
-                  color: "var(--text-secondary)",
-                  fontSize: "0.85rem",
-                  lineHeight: 1.6,
-                }}
-              >
-                Currently open to senior/lead engineering roles and select
-                freelance projects. Response time: within 24 hours.
-              </p>
-            </div>
+        
           </motion.div>
         </div>
       </div>
@@ -373,14 +314,9 @@ export default function Contact() {
           className="mono"
           style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}
         >
-          © 2024 Alex Morgan
+          © 2026 Kaustubh Thakur
         </span>
-        <span
-          className="mono"
-          style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}
-        >
-          Built with Next.js & ♥
-        </span>
+       
       </div>
 
       <style jsx>{`
