@@ -3,46 +3,27 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const experiences = [
-  {
-    company: "Vercel",
-    role: "Senior Frontend Engineer",
-    period: "2023 — Present",
-    location: "San Francisco, CA (Remote)",
+ {
+    company: "Celusion Technologies",
+    role: "Software Developer Trainee",
+    period: "Oct 2025 — Present",
+    location: "Thane,Maharastra",
     description:
-      "Lead the developer experience team building the Next.js dashboard and analytics platform. Reduced bundle size by 40% and improved Core Web Vitals across the board.",
-    stack: ["Next.js", "TypeScript", "Turborepo", "Rust"],
-    current: true,
-  },
-  {
-    company: "Stripe",
-    role: "Full-Stack Engineer",
-    period: "2021 — 2023",
-    location: "Dublin, Ireland",
-    description:
-      "Built and scaled payment infrastructure powering millions of transactions. Designed the new developer docs platform used by 500k+ developers worldwide.",
-    stack: ["React", "Ruby", "PostgreSQL", "Redis"],
+      "Solved bugs and added multiple features on multiple products ,Interacted with clients to solve issue on uat and production env . Developed applications on uat and production env",
+    stack: ["Vue.js", "Javascript", "SqlServer", "C#","Asp.NETCore","Linux"],
     current: false,
   },
-  {
-    company: "Shopify",
-    role: "Software Developer",
-    period: "2019 — 2021",
-    location: "Ottawa, Canada",
+   {
+    company: "Autosync",
+    role: "Fullstack developer",
+    period: "Aug 2025 - Oct 2025",
+    location: "Mumbai,Maharastra",
     description:
-      "Developed merchant-facing tools for the Admin platform. Shipped A/B tested features that increased merchant conversion rates by 18%.",
-    stack: ["React", "GraphQL", "Rails", "MySQL"],
+      "Worked on product backend,build multiple APIS, Worked on 2 side products and hardware stuff",
+    stack: ["Next.js", "TypeScript", "Javascript", "Node.js","Express.js","Firebase","MQTT"],
     current: false,
   },
-  {
-    company: "Freelance",
-    role: "Web Developer",
-    period: "2017 — 2019",
-    location: "Remote",
-    description:
-      "Designed and built 20+ websites and web apps for startups and agencies across Europe. Specialized in performance-focused React applications.",
-    stack: ["React", "Node.js", "MongoDB", "Figma"],
-    current: false,
-  },
+
 ];
 
 export default function Experience() {
@@ -59,15 +40,6 @@ export default function Experience() {
       }}
     >
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="section-label"
-          style={{ marginBottom: "1rem" }}
-        >
-          02 — Experience
-        </motion.p>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

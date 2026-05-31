@@ -86,7 +86,6 @@ export default function About() {
             </motion.p>
           ))}
 
-          {/* Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -138,14 +137,11 @@ export default function About() {
             </div>
           </motion.div>
         </div>
-
-        {/* Right stats */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {/* Profile placeholder */}
           <div
             style={{
               width: "100%",

@@ -5,7 +5,7 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
@@ -130,28 +130,6 @@ export default function Navbar() {
               )}
             </a>
           ))}
-
-          {/* Theme toggle */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={toggleTheme}
-            style={{
-              background: "var(--tag-bg)",
-              border: "1px solid var(--border)",
-              borderRadius: "50%",
-              width: 36,
-              height: 36,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              color: "var(--accent)",
-              transition: "all 0.2s",
-            }}
-          >
-            {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
-          </motion.button>
         </div>
 
         {/* Mobile controls */}
