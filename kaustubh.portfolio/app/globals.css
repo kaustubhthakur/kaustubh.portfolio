@@ -1,26 +1,104 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #161616;
+  --border: #2a2a2a;
+  --text-primary: #f0ede8;
+  --text-secondary: #888;
+  --text-muted: #555;
+  --accent: #e8d5b0;
+  --accent-glow: rgba(232, 213, 176, 0.15);
+  --accent-2: #c4a882;
+  --tag-bg: #1e1e1e;
+  --nav-bg: rgba(10, 10, 10, 0.85);
+  --shadow: 0 0 60px rgba(0,0,0,0.5);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --bg: #f5f2ed;
+  --bg-secondary: #ede9e2;
+  --bg-card: #ffffff;
+  --border: #ddd8d0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #999;
+  --accent: #8b6914;
+  --accent-glow: rgba(139, 105, 20, 0.12);
+  --accent-2: #a07820;
+  --tag-bg: #ebe6dd;
+  --nav-bg: rgba(245, 242, 237, 0.9);
+  --shadow: 0 0 60px rgba(0,0,0,0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Fluid base font — scales smoothly from 14px (320px) → 16px (1024px+) */
+html {
+  font-size: clamp(14px, 0.875rem + 0.33vw, 16px);
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* mobile default */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Syne', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  max-width: 100vw;
+  /* Prevent iOS tap highlight flash */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+::selection { background: var(--accent-glow); color: var(--accent); }
+
+/* Hide scrollbar on mobile — not useful on touch */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar { display: none; }
+  html { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+}
+
+/* Responsive scroll-padding to account for nav height at each breakpoint */
+@media (min-width: 480px) {
+  html { scroll-padding-top: 70px; }
+}
+@media (min-width: 768px) {
+  html { scroll-padding-top: 75px; }
+}
+@media (min-width: 1024px) {
+  html { scroll-padding-top: 80px; }
+}
+
+.mono { font-family: 'DM Mono', monospace; }
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(0.65rem, 0.6rem + 0.15vw, 0.7rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
 }
