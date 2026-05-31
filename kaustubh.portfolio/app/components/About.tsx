@@ -3,9 +3,24 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = [
-  "TypeScript", "React", "Next.js", "Node.js",
-  "PostgreSQL", "Redis", "Docker", "AWS",
-  "GraphQL", "Tailwind CSS", "Figma", "Git",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "PostgreSQL",
+  "Redis",
+  "Docker",
+  "Linux",
+  "Python",
+  "GraphQL",
+  "Tailwind CSS",
+  "SQL",
+  "Git",
+  "C#",
+  "ASP.NET Core",
+  "JavaScript",
+  "SQL Server",
+  "C++",
 ];
 
 const stats = [
