@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "Alex Morgan — Full-Stack Developer",
-  description: "Portfolio of Alex Morgan, a full-stack engineer crafting fast, purposeful web experiences.",
+  title: "Kaustubh Thakur",
+  description: "Portfolio of Kaustubh Thakur, a full-stack engineer crafting fast, purposeful web experiences.",
 };
 
 export default function RootLayout({

@@ -36,7 +36,7 @@ export default function About() {
         className="section-label"
         style={{ marginBottom: "1rem" }}
       >
-        01 — About me
+     ABOUT ME
       </motion.p>
 
       <div
@@ -146,40 +146,38 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {/* Profile placeholder */}
-          <div
-            style={{
-              width: "100%",
-              aspectRatio: "4/3",
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              borderRadius: "0.5rem",
-              marginBottom: "2rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              overflow: "hidden",
-              position: "relative",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background: "linear-gradient(135deg, var(--accent-glow) 0%, transparent 60%)",
-              }}
-            />
-            <span
-              className="mono"
-              style={{
-                color: "var(--text-muted)",
-                fontSize: "0.75rem",
-                letterSpacing: "0.1em",
-                position: "relative",
-              }}
-            >
-              [ your photo ]
-            </span>
-          </div>
+      <div
+  style={{
+    width: "100%",
+    aspectRatio: "4/3",
+    background: "var(--bg-card)",
+    border: "1px solid var(--border)",
+    borderRadius: "0.5rem",
+    marginBottom: "2rem",
+    overflow: "hidden",
+    position: "relative",
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background: "linear-gradient(135deg, var(--accent-glow) 0%, transparent 60%)",
+      zIndex: 1,
+    }}
+  />
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusGjAjzlEG2zMSlAw3Zc_i_drN8z30YoYSP5rnx5peW2NIQzNN_okvd-s9ElZa90sIYmGdk8YJR9KoXNh7s0_cuPKsZAp8dORi6bL2PSw&s=10g"
+    alt="Profile"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      display: "block",
+      position: "relative",
+    }}
+  />
+</div>
 
           {/* Stats grid */}
           <div
