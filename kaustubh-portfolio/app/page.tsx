@@ -4,9 +4,8 @@ import GithubIcon from "@/components/github-icon";
 import Profile3D from "@/components/profile-3d-client";
 
 const socials = [
-  { icon: GithubIcon, href: "https://github.com/your-username", label: "GitHub" },
-  { icon: GithubIcon, href: "https://linkedin.com/in/your-username", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:you@example.com", label: "Email" },
+  { icon: GithubIcon, href: "https://github.com/kaustubhthakur", label: "GitHub" },
+  { icon: Mail, href: "mailto:kaustubhthakur66@gmail.com", label: "Email" },
 ];
 
 export default function HomePage() {
@@ -19,17 +18,17 @@ export default function HomePage() {
 
       <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-5xl flex-col justify-center px-6 py-16">
         <div className="flex flex-col items-center gap-5 text-center">
-          <p className="font-mono text-sm text-accent">~/hello</p>
+          <p className="font-mono text-sm text-accent">~/Kaustubh Thakur</p>
 
-          <h1 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
-            I&apos;m Your Name, a developer who builds things for the web.
-          </h1>
+         <h1 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
+  I&apos;m Kaustubh, an engineer who builds across hardware and software.
+</h1>
 
-          <p className="max-w-md text-muted">
-            I design and build fast, accessible web apps end to end —
-            from interface to infrastructure. Currently focused on
-            [what you&apos;re into right now].
-          </p>
+<p className="max-w-md text-muted">
+  I design and build things end to end — from electronics and embedded
+  systems to applications and software. I enjoy turning ideas into
+  real, working products.
+</p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
