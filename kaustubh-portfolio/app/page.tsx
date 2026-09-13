@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {  Mail, ArrowDown } from "lucide-react";
 import GithubIcon from "@/components/github-icon";
+import Profile3D from "@/components/profile-3d-client";
 
 const socials = [
   { icon: GithubIcon, href: "https://github.com/your-username", label: "GitHub" },
@@ -12,13 +13,13 @@ export default function HomePage() {
   return (
     <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-5xl flex-col justify-center px-6 py-16">
       <div className="flex flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
+        {/* 3D photo */}
         <div className="relative shrink-0">
-          <div className="relative h-44 w-44 overflow-hidden rounded-full border border-border md:h-64 md:w-64">
-            <div className="flex h-full w-full items-center justify-center bg-border/30 font-mono text-xs text-muted">
-              [ photo ]
-            </div>
+          <div className="relative h-44 w-44 md:h-64 md:w-64">
+            <Profile3D />
           </div>
 
+          {/* availability badge */}
           <div className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-border bg-bg px-3 py-1.5 shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
@@ -28,6 +29,7 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Content */}
         <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
           <p className="font-mono text-sm text-accent">~/hello</p>
 
@@ -75,6 +77,7 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* scroll cue */}
       <div className="mt-16 flex justify-center md:mt-24">
         <ArrowDown size={16} className="animate-bounce text-muted" />
       </div>
