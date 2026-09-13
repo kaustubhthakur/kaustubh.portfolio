@@ -13,30 +13,17 @@ export default function HomePage() {
   return (
     <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-5xl flex-col justify-center px-6 py-16">
       <div className="flex flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
-        {/* 3D photo */}
-        <div className="relative shrink-0">
-          <div className="relative h-44 w-44 md:h-64 md:w-64">
-            <Profile3D />
-          </div>
-
-          {/* availability badge */}
-          <div className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-border bg-bg px-3 py-1.5 shadow-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            <span className="font-mono text-xs text-text">open to work</span>
-          </div>
+        {/* 3D scene — floating, no frame */}
+        <div className="relative h-64 w-64 shrink-0 md:h-80 md:w-80">
+          <Profile3D />
         </div>
 
         {/* Content */}
-        <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
+        <div className="flex min-w-0 flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
           <p className="font-mono text-sm text-accent">~/hello</p>
 
-          <h1 className="font-display text-4xl font-semibold leading-tight md:text-5xl">
-            I&apos;m Your Name,
-            <br className="hidden md:block" /> a developer who builds
-            things for the web.
+          <h1 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
+            I&apos;m Your Name, a developer who builds things for the web.
           </h1>
 
           <p className="max-w-md text-muted">
@@ -77,7 +64,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* scroll cue */}
       <div className="mt-16 flex justify-center md:mt-24">
         <ArrowDown size={16} className="animate-bounce text-muted" />
       </div>
