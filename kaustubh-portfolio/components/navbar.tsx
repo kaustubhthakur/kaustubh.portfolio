@@ -25,12 +25,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // lock body scroll while mobile menu is open
+
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  // close mobile menu automatically on route change
+ 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
@@ -44,7 +44,7 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
           <Link href="/" className="font-mono text-sm text-text">
-            <span className="text-muted">~/</span>your-name
+            <span className="text-muted">~/</span>Kaustubh Thakur
           </Link>
 
           {/* desktop links */}

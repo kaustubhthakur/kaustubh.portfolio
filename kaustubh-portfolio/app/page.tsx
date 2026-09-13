@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {  Mail, ArrowDown } from "lucide-react";
+import { Mail, ArrowDown } from "lucide-react";
 import GithubIcon from "@/components/github-icon";
 import Profile3D from "@/components/profile-3d-client";
 
@@ -11,15 +11,14 @@ const socials = [
 
 export default function HomePage() {
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-5xl flex-col justify-center px-6 py-16">
-      <div className="flex flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
-        {/* 3D scene — floating, no frame */}
-        <div className="relative h-64 w-64 shrink-0 md:h-80 md:w-80">
-          <Profile3D />
-        </div>
+    <>
+      {/* full-page particle background — fixed behind everything, clicks pass through */}
+      <div className="pointer-events-none fixed inset-0 -z-10 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_42%,black_0%,black_25%,white_75%)] [-webkit-mask-image:radial-gradient(ellipse_60%_55%_at_50%_42%,black_0%,black_25%,white_75%)]">
+        <Profile3D />
+      </div>
 
-        {/* Content */}
-        <div className="flex min-w-0 flex-1 flex-col items-center gap-5 text-center md:items-start md:text-left">
+      <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-5xl flex-col justify-center px-6 py-16">
+        <div className="flex flex-col items-center gap-5 text-center">
           <p className="font-mono text-sm text-accent">~/hello</p>
 
           <h1 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
@@ -32,7 +31,7 @@ export default function HomePage() {
             [what you&apos;re into right now].
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2 md:justify-start">
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
               href="/projects"
               className="rounded-md bg-text px-5 py-2.5 font-mono text-sm text-bg transition-opacity hover:opacity-85"
@@ -62,11 +61,11 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </div>
 
-      <div className="mt-16 flex justify-center md:mt-24">
-        <ArrowDown size={16} className="animate-bounce text-muted" />
-      </div>
-    </section>
+        <div className="mt-16 flex justify-center md:mt-24">
+          <ArrowDown size={16} className="animate-bounce text-muted" />
+        </div>
+      </section>
+    </>
   );
 }
