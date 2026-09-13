@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -22,7 +23,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Developer",
+  title: "Kaustubh Thakur",
   description: "Developer portfolio",
 };
 
@@ -33,10 +34,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${display.variable} ${body.variable} ${mono.variable} font-body`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body
+        className={`${display.variable} ${body.variable} ${mono.variable} flex min-h-screen flex-col font-body`}
+      >
+        <ThemeProvider>
           <Navbar />
-          <main>{children}</main>
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
