@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 
@@ -32,16 +31,16 @@ export default function ResumePage() {
 
           {/* Actions */}
           <div className="flex flex-wrap gap-3">
+            {/* View = jump to embedded PDF */}
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#resume-viewer"
               className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 font-mono text-sm text-text transition-colors hover:border-accent"
             >
               <ExternalLink size={16} />
               view
             </a>
 
+            {/* Download PDF */}
             <a
               href="/resume.pdf"
               download="Kaustubh-Thakur-Resume.pdf"
@@ -54,7 +53,10 @@ export default function ResumePage() {
         </div>
 
         {/* PDF Viewer */}
-        <div className="overflow-hidden rounded-xl border border-border bg-bg shadow-2xl">
+        <div
+          id="resume-viewer"
+          className="overflow-hidden rounded-xl border border-border bg-bg shadow-2xl"
+        >
           <iframe
             src="/resume.pdf"
             title="Kaustubh Thakur Resume"
@@ -65,4 +67,3 @@ export default function ResumePage() {
     </main>
   );
 }
-
