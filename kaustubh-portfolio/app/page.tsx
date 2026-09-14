@@ -106,13 +106,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="mt-20 flex justify-center md:mt-24">
-          <ArrowDown
-            size={16}
-            className="animate-bounce text-muted"
-          />
-        </div>
+     
       </section>
     </>
   );
