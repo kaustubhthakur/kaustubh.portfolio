@@ -1,7 +1,7 @@
 export default function WorkPage() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-6 py-20 md:px-10">
-      {/* Header */}
+    
     <div className="mb-16">
   <p className="mb-4 font-mono text-sm text-muted">
     ~/experience
@@ -74,7 +74,7 @@ export default function WorkPage() {
               </li>
             </ul>
 
-            {/* Technologies */}
+      
             <div className="mt-7 flex flex-wrap gap-2">
               {[
                 "MQTT",
@@ -166,7 +166,7 @@ export default function WorkPage() {
 
             </ul>
 
-            {/* Technologies */}
+    
             <div className="mt-7 flex flex-wrap gap-2">
               {[
                 "APIs",

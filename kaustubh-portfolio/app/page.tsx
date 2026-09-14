@@ -81,10 +81,10 @@ export default function HomePage() {
   
 
           <div className="relative flex items-center justify-center md:justify-end">
-            {/* Ambient glow behind portrait */}
+            
             <div className="absolute h-64 w-64 rounded-full bg-accent/10 blur-3xl md:h-80 md:w-80" />
 
-            {/* Floating portrait */}
+        
             <div className="relative animate-[levitate_5s_ease-in-out_infinite]">
               <div className="relative h-64 w-64 overflow-hidden rounded-full border border-border/70 bg-bg/40 shadow-2xl backdrop-blur-sm md:h-72 md:w-72 lg:h-80 lg:w-80">
 
