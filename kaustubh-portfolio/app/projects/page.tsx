@@ -19,29 +19,58 @@ const projects = [
   },
  {
     number: "02",
-    title: "Nond",
-    description: [
-      "Built a full-stack inventory management platform for small retailers, enabling store onboarding, product and warehouse management, shelf- and box-level inventory tracking, supplier and customer management, and purchase, sale, and stock-adjustment transactions.",
+    title: "EigenX",
+   description: [
+  "Developed a Mental Math application with three difficulty levels and a real-time multiplayer duel feature, enabling users to improve calculation speed and accuracy by competing with friends or randomly matched opponents in a gamified environment.",
 
-      "Designed an AI-driven business intelligence layer that analyzes transaction history and inventory data to generate monthly insights, demand predictions, and stock alerts, supported by dashboards, reports, and Firebase push notifications for vendors.",
-    ],
+  "Implemented a dynamic ranking dashboard and user profile system featuring ranking levels, user statistics, performance tracking, and other personalized insights.",
+],
     tags: [
-      "React",
+      "Next.js",
       "Node.js",
       "Express.js",
-      "Firebase",
-      "AI",
-      "Inventory",
+      "Postgresql",
+      "SQL",
+      "Typescript",
+      "Javascript",
+      "Websockets",
     ],
-    github: "https://github.com/kaustubhthakur/Nond",
+    github: "https://github.com/kaustubhthakur/EigenX",
   },
   {
     number: "03",
-    title: "Project Three",
-    description:
-      "An experimental system combining electronics, firmware, and a custom application.",
-    tags: ["IoT", "Electronics", "Python"],
-    github: "https://github.com/kaustubhthakur/project-three",
+    title: "FootBuzz",
+ description: [
+  "Developed a football prediction application that analyzes match data to forecast winning outcomes and goal projections using XGBoost and Logistic Regression models.",
+
+  "Implemented secure authentication, multi-league support, and community-driven features that allow users to vote on predicted match winners, share predictions, and engage with insights from other users.",
+],
+    tags: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Postgresql",
+      "SQL",
+      "Typescript",
+      "Javascript",
+      "Websockets",
+      "Python",
+      "Numpy",
+      "Pandas"
+    ],
+    github: "https://github.com/kaustubhthakur/trendcast",
+  },{
+    number: "04",
+    title: "QuickCache",
+ description: [
+  "Developed an in-memory key-value database in Go that supports concurrent access from multiple clients, implementing efficient data storage and retrieval while ensuring thread-safe operations under high request volumes.",
+
+  "Implemented a TCP server that binds to a designated port, accepts multiple client connections, and handles concurrent requests to enable reliable client-server communication.",
+],
+    tags: [
+     "Golang"
+    ],
+    github: "https://github.com/kaustubhthakur/redis",
   },
 ];
 
