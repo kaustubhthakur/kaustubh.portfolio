@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Download, ExternalLink } from "lucide-react";
+import { ArrowLeft, Download, Eye } from "lucide-react";
 
 export default function ResumePage() {
   return (
@@ -10,7 +10,7 @@ export default function ResumePage() {
           <div>
             <Link
               href="/"
-              className="mb-4 inline-flex items-center gap-2 font-mono text-sm text-muted transition-colors hover:text-accent"
+              className="mb-5 inline-flex items-center gap-2 font-mono text-sm text-muted transition-colors hover:text-accent"
             >
               <ArrowLeft size={16} />
               back home
@@ -29,20 +29,20 @@ export default function ResumePage() {
             </p>
           </div>
 
-          {/* Actions */}
-          <div className="flex flex-wrap gap-3">
-            {/* View = jump to embedded PDF */}
+          {/* Resume actions */}
+          <div className="flex items-center gap-3">
+            {/* View */}
             <a
               href="#resume-viewer"
               className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 font-mono text-sm text-text transition-colors hover:border-accent"
             >
-              <ExternalLink size={16} />
+              <Eye size={16} />
               view
             </a>
 
-            {/* Download PDF */}
+            {/* Download */}
             <a
-              href="/resume.pdf"
+              href="/kaustubh.thakur.pdf"
               download="Kaustubh-Thakur-Resume.pdf"
               className="inline-flex items-center gap-2 rounded-md bg-text px-5 py-2.5 font-mono text-sm text-bg transition-opacity hover:opacity-85"
             >
@@ -52,17 +52,17 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* PDF Viewer */}
-        <div
+        {/* Resume viewer */}
+        <section
           id="resume-viewer"
           className="overflow-hidden rounded-xl border border-border bg-bg shadow-2xl"
         >
           <iframe
-            src="/resume.pdf"
+            src="/kaustubh.thakur.pdf"
             title="Kaustubh Thakur Resume"
             className="h-[80vh] min-h-[700px] w-full"
           />
-        </div>
+        </section>
       </div>
     </main>
   );
