@@ -28,9 +28,7 @@ export default function HomePage() {
       <section className="mx-auto flex min-h-[calc(100vh-4rem-4.5rem)] max-w-6xl flex-col justify-center px-6 py-16">
         <div className="grid items-center gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-8 lg:gap-16">
 
-          {/* ===================================== */}
-          {/* LEFT — INTRO */}
-          {/* ===================================== */}
+      
 
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <p className="font-mono text-sm text-accent">
@@ -84,9 +82,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* ===================================== */}
-          {/* RIGHT — LEVITATING PROFILE */}
-          {/* ===================================== */}
+  
 
           <div className="relative flex items-center justify-center md:justify-end">
             {/* Ambient glow behind portrait */}
