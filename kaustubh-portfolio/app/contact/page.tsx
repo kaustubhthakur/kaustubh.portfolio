@@ -56,7 +56,7 @@ export default function ContactPage() {
           <h1 className="text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight text-text md:text-7xl">
             Let&apos;s build
             <br />
-            <span className="text-muted">something worth building.</span>
+         
           </h1>
 
           <p className="mt-8 max-w-2xl text-base leading-8 text-muted md:text-lg">
@@ -155,7 +155,7 @@ export default function ContactPage() {
       <section className="mt-16 border-t border-border pt-7">
         <div className="flex flex-col justify-between gap-3 text-xs text-muted sm:flex-row">
           <p className="font-mono">
-            Based in India
+            Mumbai,Maharastra
           </p>
 
           <p className="font-mono">
