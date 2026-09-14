@@ -2,26 +2,26 @@ export default function WorkPage() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-6 py-20 md:px-10">
       {/* Header */}
-      <div className="mb-16">
-        <p className="mb-4 font-mono text-sm text-muted">
-          ~/work
-        </p>
+    <div className="mb-16">
+  <p className="mb-4 font-mono text-sm text-muted">
+    ~/experience
+  </p>
 
-        <h1 className="max-w-2xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
-          Things I&apos;ve worked on.
-        </h1>
+  <h1 className="max-w-2xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
+    My professional experience.
+  </h1>
 
-        <p className="mt-6 max-w-xl leading-7 text-muted">
-          I work across hardware and software, building systems from
-          the physical electronics all the way to the applications that
-          control and connect them.
-        </p>
-      </div>
+  <p className="mt-6 max-w-xl leading-7 text-muted">
+    A summary of my professional experience, responsibilities, and
+    contributions.
+  </p>
+</div>
+
 
       {/* Experience */}
       <div className="divide-y divide-border border-y border-border">
 
-        {/* ================= AUTOSYNC ================= */}
+      
 
         <article className="grid gap-8 py-10 md:grid-cols-[200px_1fr]">
           
@@ -97,7 +97,7 @@ export default function WorkPage() {
         </article>
 
 
-        {/* ================= CELUSION ================= */}
+       
 
         <article className="grid gap-8 py-10 md:grid-cols-[200px_1fr]">
 
