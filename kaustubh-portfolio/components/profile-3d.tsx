@@ -51,10 +51,7 @@ function CodeSingularity() {
       const data = Array.from(
         { length: PARTICLE_COUNT },
         () => {
-          /*
-           * Concentrate most particles
-           * around the inner disk.
-           */
+        
           const r =
             Math.pow(Math.random(), 1.8);
 
@@ -133,9 +130,7 @@ function CodeSingularity() {
       return;
     }
 
-    // =========================================
-    // ACCRETION DISK
-    // =========================================
+ 
 
     for (
       let i = 0;
@@ -152,11 +147,7 @@ function CodeSingularity() {
       const closeness =
         1 - normalized;
 
-      /*
-       * Inner material moves much faster.
-       * This gives the disk a black-hole
-       * accretion appearance.
-       */
+   
       const orbitalSpeed =
         0.25 +
         1.25 /
@@ -174,9 +165,7 @@ function CodeSingularity() {
         delta *
         p.wobbleSpeed;
 
-      /*
-       * Turbulent gas.
-       */
+    
       const turbulence =
         Math.sin(
           p.wobble +
@@ -186,10 +175,7 @@ function CodeSingularity() {
         p.turbulence *
         (0.3 + closeness);
 
-      /*
-       * Disk is slightly thicker
-       * near the black hole.
-       */
+     
       const vertical =
         p.thickness *
         (0.3 + closeness * 2) +
@@ -219,14 +205,7 @@ function CodeSingularity() {
         z
       );
 
-      // =======================================
-      // COLOR / HEAT
-      // =======================================
-
-      /*
-       * Inner disk = almost white.
-       * Outer disk = deep blue.
-       */
+    
       if (closeness > 0.72) {
         tmpColor
           .copy(WHITE)
@@ -248,10 +227,7 @@ function CodeSingularity() {
           );
       }
 
-      /*
-       * Subtle individual brightness
-       * variation prevents a uniform CGI look.
-       */
+    
       const variation =
         0.72 +
         Math.sin(i * 17.37) *
@@ -280,18 +256,13 @@ function CodeSingularity() {
     colorAttribute.needsUpdate =
       true;
 
-    // =========================================
-    // DISK ROTATION
-    // =========================================
+   
 
     if (diskRef.current) {
       diskRef.current.rotation.y +=
         delta * 0.075;
 
-      /*
-       * Slight movement of the entire
-       * disk plane.
-       */
+     
       diskRef.current.rotation.x =
         0.5 +
         Math.sin(
@@ -300,9 +271,7 @@ function CodeSingularity() {
           0.018;
     }
 
-    // =========================================
-    // BLACK HOLE ROTATION
-    // =========================================
+ 
 
     if (coreRef.current) {
       coreRef.current.rotation.y +=
@@ -312,9 +281,7 @@ function CodeSingularity() {
         delta * 0.04;
     }
 
-    // =========================================
-    // PHOTON RING
-    // =========================================
+    
 
     if (photonRingRef.current) {
       photonRingRef.current.rotation.z +=
@@ -335,9 +302,6 @@ function CodeSingularity() {
       );
     }
 
-    // =========================================
-    // GRAVITATIONAL GLOW
-    // =========================================
 
     if (photonGlowRef.current) {
       const pulse =
@@ -371,9 +335,7 @@ function CodeSingularity() {
         0.08,
       ]}
     >
-      {/* ===================================== */}
-      {/* ACCRETION DISK */}
-      {/* ===================================== */}
+   
 
       <points ref={particlesRef}>
         <bufferGeometry>
@@ -407,15 +369,10 @@ function CodeSingularity() {
         />
       </points>
 
-      {/* ===================================== */}
-      {/* BLACK HOLE CORE */}
-      {/* ===================================== */}
+ 
 
       <group ref={coreRef}>
-        {/* --------------------------------- */}
-        {/* EVENT HORIZON */}
-        {/* --------------------------------- */}
-
+     
         <mesh>
           <sphereGeometry
             args={[
@@ -431,9 +388,6 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* --------------------------------- */}
-        {/* ABSOLUTE BLACK INNER SHADOW */}
-        {/* --------------------------------- */}
 
         <mesh scale={[1.05, 1.05, 1.05]}>
           <sphereGeometry
@@ -453,9 +407,7 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* ================================= */}
-        {/* PHOTON RING */}
-        {/* ================================= */}
+     
 
         <mesh
           ref={photonRingRef}
@@ -486,9 +438,7 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* --------------------------------- */}
-        {/* SECOND VERY THIN RING */}
-        {/* --------------------------------- */}
+
 
         <mesh
           rotation={[
@@ -518,9 +468,7 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* ================================= */}
-        {/* INNER GRAVITATIONAL HALO */}
-        {/* ================================= */}
+    
 
         <mesh
           ref={photonGlowRef}
@@ -550,9 +498,7 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* ================================= */}
-        {/* FAINT OUTER LENSING GLOW */}
-        {/* ================================= */}
+   
 
         <mesh
           scale={[
@@ -581,9 +527,7 @@ function CodeSingularity() {
           />
         </mesh>
 
-        {/* ================================= */}
-        {/* LIGHT */}
-        {/* ================================= */}
+    
 
         <pointLight
           ref={lightRef}
