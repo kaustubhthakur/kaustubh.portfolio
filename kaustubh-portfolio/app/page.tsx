@@ -30,57 +30,53 @@ export default function HomePage() {
 
       
 
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <p className="font-mono text-sm text-accent">
-              ~/Kaustubh Thakur
-            </p>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+  <p className="font-mono text-sm text-accent">
+    ~/Kaustubh Thakur
+  </p>
 
-            <h1 className="mt-5 max-w-2xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">
-              I&apos;m Kaustubh, an engineer who builds across hardware and
-              software.
-            </h1>
+  <h1 className="mt-5 max-w-2xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">
+    I&apos;m Kaustubh, an engineer who loves solving problems and building things.
+  </h1>
 
-            <p className="mt-6 max-w-xl text-muted">
-              I design and build things end to end — from electronics and
-              embedded systems to applications and software. I enjoy turning
-              ideas into real, working products.
-            </p>
+  <p className="mt-6 max-w-xl text-muted">
+    I&apos;m curious about electronics, software, mathematics, physics, and
+    chess — anything that challenges the way I think. I enjoy understanding
+    how things work, breaking down difficult problems, and turning ideas into
+    real, working systems.
+  </p>
 
-            {/* Buttons */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <Link
-                href="/projects"
-                className="rounded-md bg-text px-5 py-2.5 font-mono text-sm text-bg transition-opacity hover:opacity-85"
-              >
-                view my work
-              </Link>
+  <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+    <Link
+      href="/projects"
+      className="rounded-md bg-text px-5 py-2.5 font-mono text-sm text-bg transition-opacity hover:opacity-85"
+    >
+      view my work
+    </Link>
 
-              <Link
-                href="/contact"
-                className="rounded-md border border-border px-5 py-2.5 font-mono text-sm text-text transition-colors hover:border-accent"
-              >
-                get in touch
-              </Link>
-            </div>
+    <Link
+      href="/contact"
+      className="rounded-md border border-border px-5 py-2.5 font-mono text-sm text-text transition-colors hover:border-accent"
+    >
+      get in touch
+    </Link>
+  </div>
 
-            {/* Socials */}
-            <div className="mt-6 flex items-center gap-5">
-              {socials.map(
-                ({ icon: Icon, href, label }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="text-muted transition-colors hover:text-accent"
-                  >
-                    <Icon size={18} />
-                  </Link>
-                )
-              )}
-            </div>
-          </div>
+  <div className="mt-6 flex items-center gap-5">
+    {socials.map(({ icon: Icon, href, label }) => (
+      <Link
+        key={label}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        className="text-muted transition-colors hover:text-accent"
+      >
+        <Icon size={18} />
+      </Link>
+    ))}
+  </div>
+</div>
 
   
 
