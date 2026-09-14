@@ -40,3 +40,13 @@ body {
   color: var(--text);
   transition: background-color 0.25s ease, color 0.25s ease;
 }
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
