@@ -93,7 +93,7 @@ export default function ContactPage() {
           </div>
 
           <span className="hidden font-mono text-xs text-muted sm:block">
-            06 links
+            05 links
           </span>
         </div>
 
