@@ -13,12 +13,6 @@ export default function ContactPage() {
       description: "Professional profile",
     },
     {
-      label: "Chess.com",
-      handle: "magnificentsteiner17",
-      href: "https://www.chess.com/member/magnificentsteiner17",
-      description: "Chess & strategy",
-    },
-    {
       label: "Codeforces",
       handle: "Nameless_Monster03",
       href: "https://codeforces.com/profile/Nameless_Monster03",
